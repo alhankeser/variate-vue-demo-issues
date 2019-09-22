@@ -1,0 +1,90 @@
+<template>
+    <div class="navigation">
+        <div class="container">
+            <nav class="flex items-center py-3">
+                <div class="flex-grow">
+                    <router-link to="/" class="logo">
+                        variate
+                    </router-link>
+                </div>
+                <div class="hidden sm:flex">
+                    <router-link to="features" >Features</router-link>
+                    <router-link to="pricing" >Pricing</router-link>
+                    <router-link to="company" >Company</router-link>
+                </div>
+                <div class="hidden sm:flex ml-5">
+                    <router-link to="login">Log In</router-link>
+                </div>
+                <div class="mobileNavButton sm:hidden" :class="{ 'open' : mobileNavOpen}" @click="mobileNavOpen = !mobileNavOpen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobileNav sm:hidden bg-gray-200 p-10" :class="showMobileNav">
+                    <div><router-link to="features">Features</router-link></div>
+                    <div><router-link to="pricing">Pricing</router-link></div>
+                    <div><router-link to="company">Company</router-link></div>
+                    <div><router-link to="login">Log In</router-link></div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'Navigation',
+    data() {
+        return {
+            mobileNavOpen: false
+        }
+    },
+    computed: {
+        showMobileNav() {
+            return {
+                'absolute': this.mobileNavOpen,
+                'hidden': !this.mobileNavOpen
+            }
+        }
+    }
+}
+</script>
+
+<style>
+    nav a {
+        @apply px-3 font-semibold text-white
+    }
+    nav .logo {
+        @apply font-bold text-4xl tracking-tight text-white
+    }
+    nav .button {
+        @apply px-6 py-2 bg-white 
+    }
+    nav .button:hover {
+        @apply bg-gray-100
+    }
+    .mobileNavButton {
+        @apply z-10 w-16 h-16 p-3
+    }
+    .mobileNavButton span {
+        @apply block bg-white w-full h-2 mt-1;
+        transition: 0.2s;
+    }
+    .mobileNavButton.open span:nth-child(1) {
+        @apply mt-4;
+        transform: rotate(45deg);
+    }
+    .mobileNavButton.open span:nth-child(2) {
+        @apply -mt-2;
+        transform: rotate(-45deg);
+    }
+    .mobileNavButton.open span:nth-child(3) {
+        @apply hidden;
+    }
+    .mobileNav {
+        @apply absolute right-0 top-0 z-0 mt-16;
+    }
+    .mobileNav div, .mobileNav div a {
+        @apply py-3 text-gray-900
+    }
+</style>

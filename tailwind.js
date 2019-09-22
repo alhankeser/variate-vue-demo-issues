@@ -1,6 +1,12 @@
 module.exports = {
   theme: {
-    extend: {}
+    extend: {},
+    container: {
+      center: true,
+    },
+    experiments: {
+        shadowLookup: true
+    }
   },
   variants: {},
   plugins: []
