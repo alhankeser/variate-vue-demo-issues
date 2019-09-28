@@ -56,6 +56,37 @@ export default {
         transform: skewY(-9deg);
         transform-origin: 0;
     }
+    .heroBackground-1 span:nth-child(1) {
+        width: 200px;
+        top: -31px;
+        left: 50%;
+        background: linear-gradient(to right, transparent, #6a82fb);
+        height: 140%;
+        position: absolute;
+        opacity: .2;
+        transform: rotate(-15deg);
+    }
+    .heroBackground-1 span:nth-child(2) {
+        width: 200px;
+        height: 140%;
+        top: -31px;
+        left: 60%;
+        background: linear-gradient(to right, transparent, #fc5c7d);
+        position: absolute;
+        opacity: .2;
+        transform: rotate(15deg);
+        border-radius: 50%;
+    }
+    .heroBackground-1 span:nth-child(3) {
+        width: 600px;
+        height: 200px;
+        bottom: -22%;
+        left: 0%;
+        background: linear-gradient(to right, transparent, #a175d0);
+        position: absolute;
+        opacity: .2;
+        transform: rotate(15deg);
+    }
     main header {
        @apply text-white
     }
@@ -85,6 +116,5 @@ export default {
             max-width: 40%;  
             @apply absolute mx-auto px-0;
         }
-        
     }
 </style>

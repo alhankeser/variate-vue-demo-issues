@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style>
+  html {
+    overflow-x: hidden;
+  }
   body {
     background: #f6f9fc;
   }
