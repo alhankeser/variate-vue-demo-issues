@@ -24,7 +24,7 @@ export default {
     background: #f6f9fc;
   }
   #app {
-    @apply flex flex-col justify-between antialiased;
+    @apply flex flex-col justify-between antialiased text-gray-800;
     min-height: 100vh;
   }
   .button {
@@ -35,5 +35,8 @@ export default {
   }
   pre {
     @apply bg-gray-800 rounded  text-blue-400 inline-block p-4 shadow-inner
+  }
+  section .container {
+    @apply px-3
   }
 </style>

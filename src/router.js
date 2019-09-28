@@ -7,6 +7,7 @@ import Company from './views/Company.vue'
 import Pricing from './views/Pricing.vue'
 import Register from './views/Register.vue'
 import Login from './views/Login.vue'
+import Docs from './views/Docs.vue'
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ const router = new Router({
             path: '/features',
             name: 'features',
             component: Features
+        },
+        {
+            path: '/docs',
+            name: 'docs',
+            component: Docs
         },
         {
             path: '/register',
