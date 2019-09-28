@@ -19,15 +19,18 @@ export default {
 <style>
   body {
     background: #f6f9fc;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
   }
   #app {
-    @apply flex flex-col justify-between;
+    @apply flex flex-col justify-between antialiased;
     min-height: 100vh;
   }
   .button {
-    @apply py-3 px-8 text-gray-700 bg-white rounded shadow uppercase;
-    color: #6a82fb;
+    @apply py-3 px-8 rounded shadow uppercase inline-block;
+  }
+  .button.white {
+    @apply bg-white text-blue-400
+  }
+  pre {
+    @apply bg-gray-800 rounded  text-blue-400 inline-block p-4 shadow-inner
   }
 </style>

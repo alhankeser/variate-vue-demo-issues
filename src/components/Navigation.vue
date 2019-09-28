@@ -8,12 +8,10 @@
                     </router-link>
                 </div>
                 <div class="hidden sm:flex">
-                    <router-link to="features" >Features</router-link>
-                    <router-link to="pricing" >Pricing</router-link>
-                    <router-link to="company" >Company</router-link>
+                    <router-link v-for="link in linksLeft" :key="link.$index" :to="link.to">{{ link.label }}</router-link>
                 </div>
                 <div class="hidden sm:flex ml-5">
-                    <router-link to="login">Log In</router-link>
+                    <router-link v-for="link in linksRight" :key="link.$index" :to="link.to">{{ link.label }}</router-link>
                 </div>
                 <div class="mobileNavButton sm:hidden" :class="{ 'open' : mobileNavOpen}" @click="mobileNavOpen = !mobileNavOpen">
                     <span></span>
@@ -21,10 +19,12 @@
                     <span></span>
                 </div>
                 <div class="mobileNav sm:hidden bg-gray-200 p-10" :class="showMobileNav">
-                    <div><router-link to="features">Features</router-link></div>
-                    <div><router-link to="pricing">Pricing</router-link></div>
-                    <div><router-link to="company">Company</router-link></div>
-                    <div><router-link to="login">Log In</router-link></div>
+                    <div v-for="link in linksLeft" :key="link.$index">
+                        <router-link :to="link.to">{{ link.label }}</router-link>
+                    </div>
+                    <div v-for="link in linksRight" :key="link.$index">
+                        <router-link :to="link.to">{{ link.label }}</router-link>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -36,6 +36,14 @@ export default {
     name: 'Navigation',
     data() {
         return {
+            linksLeft: [
+                {to: 'features', label: 'Features'},
+                {to: 'pricing', label: 'Pricing'},
+                {to: 'company', label: 'Company'}
+            ],
+            linksRight: [
+                {to: 'login', label: 'Log In'}
+            ],
             mobileNavOpen: false
         }
     },
