@@ -33,7 +33,7 @@
 
 <script>
 export default {
-    name: 'Navigation',
+    name: 'navigation',
     data() {
         return {
             linksLeft: [

@@ -1,7 +1,7 @@
 <template>
     <main>
         <header>
-            <div class="heroBackground-1">
+            <div class="heroBackground home">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -11,7 +11,7 @@
                     <div class="text-content with-image">
                         <h1>The developer-friendly A/B testing tool</h1>
                         <p>Variate makes it super easy for developers to enable components for A/B testing in Vuejs and React applications.</p> <p>Get started in less than 5 minutes:</p>
-                        <div class="mb-8 flex flex-col items-start lg:flex-row lg:items-center">
+                        <div class="home-actions">
                             <pre>npm install variate-vue</pre>
                             <span class="m-1"> OR </span>
                             <pre>npm install variate-react</pre>
@@ -53,32 +53,49 @@ export default {
 
 <style>
    /* Section Side Text */
-   section .side-text {
-       @apply text-center w-2/3 mx-auto mt-16
-   }
-   section .side-text h2 {
-       @apply text-xl uppercase font-semibold text-blue-400 
-   }
-   section .side-text > * {
-       @apply mb-8
-   }
-   section .side-text .action a {
-       @apply text-indigo-400 font-semibold
-   }
-   section .side-text hr {
-       @apply border-t-2
-   }
-    @screen md {
-        section .side-text.left {
-            @apply text-right w-1/2 ml-0 pl-1
+    .side-text {
+       @apply text-center mx-auto mt-16
+    }
+    .side-text h2 {
+        @apply text-xl uppercase font-semibold text-blue-400 
+    }
+    .side-text > * {
+        @apply mb-8
+    }
+    .side-text .action a {
+        @apply text-indigo-400 font-semibold
+    }
+    .side-text hr {
+        @apply border-t-2
+    }
+    @screen sm {
+        .side-text {
+            @apply w-4/5
         }
-        section .side-text.left hr {
+    }
+    @screen md {
+        .side-text {
+            @apply w-1/2
+        }
+        .side-text.left {
+            @apply text-right ml-0 pl-1
+        }
+        .side-text.left hr {
             @apply ml-4
+        }
+        .side-text.right {
+            @apply text-left ml-auto mr-0 pr-1
+        }
+        .side-text.left hr {
+            @apply mr-4
         }
     }
     @screen lg {
-        section .side-text.left {
+        .side-text.left {
             @apply pl-32
+        }
+        .side-text.right {
+            @apply pr-32
         }
     }
 
@@ -99,20 +116,43 @@ export default {
     main header section {
         @apply py-32 relative;
     }
+    main header .text-content {
+        @apply text-center
+    }
+    .home-actions {
+        @apply mb-8 flex flex-col items-center
+    }
     @screen md {
+        .home-actions {
+            @apply items-start
+        }
+        main header .text-content {
+            @apply text-left mx-auto
+        }
         main header .text-content.with-image {
             max-width: 60%;
+            @apply ml-0
+        }
+    }
+    @screen lg {
+        main header .text-content {
+            max-width: 60%;
+        }
+        .home-actions {
+            @apply flex-row items-center
         }
     }
 
     /* Hero Background */
-    .heroBackground-1 {
+    .heroBackground {
         @apply w-full h-full overflow-hidden block absolute shadow;
+    }
+    .heroBackground.home {
         background: linear-gradient(to right, #fc5c7d, #6a82fb);
         transform: skewY(-9deg);
         transform-origin: 0;
     }
-    .heroBackground-1 span:nth-child(1) {
+    .heroBackground.home span:nth-child(1) {
         width: 200px;
         top: -31px;
         left: 50%;
@@ -122,7 +162,7 @@ export default {
         opacity: .2;
         transform: rotate(-15deg);
     }
-    .heroBackground-1 span:nth-child(2) {
+    .heroBackground.home span:nth-child(2) {
         width: 200px;
         height: 140%;
         top: -31px;
@@ -133,7 +173,7 @@ export default {
         transform: rotate(15deg);
         border-radius: 50%;
     }
-    .heroBackground-1 span:nth-child(3) {
+    .heroBackground.home span:nth-child(3) {
         width: 600px;
         height: 200px;
         bottom: -22%;
@@ -146,15 +186,16 @@ export default {
     
     /* Section Imagery */
     .imagery {
-       @apply relative w-full px-16 z-20 -mt-8
+       @apply relative w-full z-20 -mt-8
     }
     .imagery img:nth-child(1){
+        transition: 0.2s;
         transform: rotate(12deg);
         margin-left: -30px;
     }
     .imagery img:nth-child(2){
+        transition: 0.5s;
         transform: rotate(-6deg);
-        margin-top: -200px; 
         margin-left: 20px;
     }
     .imagery img {
@@ -162,8 +203,10 @@ export default {
     }
     @screen sm {
         .imagery {  
-            max-width: 100%;
-            @apply mx-auto;
+            @apply mx-auto px-16 w-4/5;
+        }
+        .imagery img:nth-child(2){
+            margin-top: -100px; 
         }
     }
     @screen md {
