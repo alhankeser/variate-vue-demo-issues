@@ -12,10 +12,10 @@
                         <div class="font-semibold uppercase">Features</div>
                         <h1>If you can dream it, you can test it</h1>
                         <p>Variate can be used to test anything within your application,
-                            from API versions to image filters. If you simply want to 
+                            from API versions to image filters. If you simply want to
                             test headlines and buttons with it, go right ahead.
                         </p>
-                        <p>Whatever you decide to test with it, two things will remain <strong>constant</strong>:</strong> there will never be a flicker of original content and when you iterate on a test, you will not need to involve your developers.
+                        <p>Whatever you decide to test with it, two things will remain <strong>constant</strong>: there will never be a flicker of original content and when you iterate on a test, you will not need to involve your developers.
                         </p>
                     </div>
                 </div>
