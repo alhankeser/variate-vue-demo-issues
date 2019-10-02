@@ -127,7 +127,7 @@ export default {
             @apply items-start
         }
         main header .text-content {
-            @apply text-left mx-auto
+            @apply text-left
         }
         main header .text-content.with-image {
             max-width: 60%;
