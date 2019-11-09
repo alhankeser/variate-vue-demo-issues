@@ -61,7 +61,7 @@ export default {
 
 <style>
     nav a {
-        @apply px-3 font-semibold text-white
+        @apply px-3 py-4 font-semibold text-white
     }
     nav .logo {
         @apply font-bold text-4xl tracking-tight text-white
@@ -71,6 +71,12 @@ export default {
     }
     nav .button:hover {
         @apply bg-gray-100
+    }
+    nav a:hover {
+        @apply text-gray-200
+    }
+    nav a.router-link-exact-active {
+        @apply border-b-2
     }
     .mobileNavButton {
         @apply z-10 w-16 h-16 p-3

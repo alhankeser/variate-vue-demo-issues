@@ -127,7 +127,7 @@ export default {
             @apply items-start
         }
         main header .text-content {
-            @apply text-left
+            @apply text-left mx-auto
         }
         main header .text-content.with-image {
             max-width: 60%;
@@ -152,36 +152,41 @@ export default {
         transform: skewY(-9deg);
         transform-origin: 0;
     }
-    .heroBackground.home span:nth-child(1) {
-        width: 200px;
-        top: -31px;
-        left: 50%;
-        background: linear-gradient(to right, transparent, #6a82fb);
-        height: 140%;
-        position: absolute;
-        opacity: .2;
-        transform: rotate(-15deg);
-    }
     .heroBackground.home span:nth-child(2) {
         width: 200px;
         height: 140%;
         top: -31px;
-        left: 60%;
+        left: -16%;
         background: linear-gradient(to right, transparent, #fc5c7d);
         position: absolute;
         opacity: .2;
         transform: rotate(15deg);
         border-radius: 50%;
     }
-    .heroBackground.home span:nth-child(3) {
-        width: 600px;
-        height: 200px;
-        bottom: -22%;
-        left: 0%;
-        background: linear-gradient(to right, transparent, #a175d0);
-        position: absolute;
-        opacity: .2;
-        transform: rotate(15deg);
+    @screen md {
+        .heroBackground.home span:nth-child(1) {
+            width: 200px;
+            top: -31px;
+            left: 50%;
+            background: linear-gradient(to right, transparent, #6a82fb);
+            height: 140%;
+            position: absolute;
+            opacity: .2;
+            transform: rotate(-15deg);
+        }
+        .heroBackground.home span:nth-child(2) {
+            left: 60%;
+        }
+        .heroBackground.home span:nth-child(3) {
+            width: 600px;
+            height: 200px;
+            bottom: -22%;
+            left: 0%;
+            background: linear-gradient(to right, transparent, #a175d0);
+            position: absolute;
+            opacity: .2;
+            transform: rotate(15deg);
+        }
     }
     
     /* Section Imagery */

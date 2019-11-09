@@ -54,13 +54,14 @@ export default {
 <style>
     .heroBackground.features {
         background: linear-gradient(to right, #74ebd5, #acb6e5);
+        /* background: #fff; */
         transform: skewY(-7deg);
         transform-origin: 0;
     }
     .heroBackground.features span:nth-child(1) {
         width: 200px;
         top: -31px;
-        left: 50%;
+        left: 0%;
         background: linear-gradient(to right, transparent, #6a82fb);
         height: 140%;
         position: absolute;
@@ -71,7 +72,7 @@ export default {
         width: 200px;
         height: 140%;
         top: -31px;
-        left: 80%;
+        left: 70%;
         background: linear-gradient(to right, transparent, #fc5c7d);
         position: absolute;
         opacity: .2;
