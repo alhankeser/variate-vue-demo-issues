@@ -12,55 +12,8 @@
                         <div class="font-semibold uppercase">Pricing</div>
                         <h1>Low, simple pricing</h1>
                         <p>Each tier is based on monthly event caps. An event is defined as a unique visit and any custom tracked events.</p>
-                        <div class="flex">
-                            <div class="box">
-                                <div class="header">
-                                    <p class="text-center uppercase">Premium Plan</p>
-                                    <p class="font-semibold">up to
-                                    <span class="text-3xl">1,000,000</span></p>
-                                    <p class="text-sm text-center">events per month</p>
-                                </div>
-                                <div class="body">
-                                    <p class="price"><span>$</span><span>49.99</span></p>
-                                    <p class="text-sm text-center">per month</p>
-                                    <hr class="my-10">
-                                    <ul class="bullets">
-                                        <li>1:1 Support For First 30 Days</li>
-                                        <li>Unlimited Sites</li>
-                                        <li>Unlimited Experiments</li>
-                                        <li>Unlimited Components</li>
-                                    </ul>
-                                    <hr class="my-10">
-                                    <div class="footer">
-                                        <a class="button" href="#">Register</a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="box">
-                                <div class="header">
-                                    <p class="text-center uppercase">Enterprise Plan</p>
-                                    <p class="font-semibold">
-                                    <span class="text-3xl">Unlimited</span></p>
-                                    <p class="text-sm text-center">events per month</p>
-                                </div>
-                                <div class="body">
-                                    <p class="price"><span>Custom Pricing</span></p>
-                                    <p class="text-sm text-center">per month</p>
-                                    <hr class="my-10">
-                                    <ul class="bullets">
-                                        <li>1:1 Support</li>
-                                        <li>Unlimited Sites</li>
-                                        <li>Unlimited Experiments</li>
-                                        <li>Unlimited Components</li>
-                                    </ul>
-                                    <hr class="my-10">
-                                    <div class="footer">
-                                        <a class="button" href="#">Contact Us</a>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                        <div class="sm:flex">
+                            <PriceBox :plan="plan" v-for="plan in plans" :key="plan.id"/>
                         </div>
                     </div>
                 </div>
@@ -82,8 +35,47 @@
 
 <script>
 
+import PriceBox from '@/components/PriceBox'
+
 export default {
-    name: 'pricing'
+    name: 'pricing',
+    components: { PriceBox },
+    data() {
+        return {
+            plans: [
+                {
+                    id: 0,
+                    name: 'Premium Plan',
+                    events: '1,000,000',
+                    price: '$49.99',
+                    period: 'per month',
+                    features: [
+                        '1:1 Support For First 30 Days',
+                        'Unlimited Sites',
+                        'Unlimited Experiments',
+                        'Unlimited Components'
+                    ],
+                    buttonText: 'Register',
+                    buttonLink: '/register'
+                },
+                {
+                    id: 1,
+                    name: 'Enterprise Plan',
+                    events: 'Unlimited',
+                    price: 'Custom Pricing',
+                    period: 'per month',
+                    features: [
+                        '1:1 Support',
+                        'Unlimited Sites',
+                        'Unlimited Experiments',
+                        'Unlimited Components'
+                    ],
+                    buttonText: 'Contact Us',
+                    buttonLink: '/contact'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -114,25 +106,6 @@ export default {
     position: absolute;
     opacity: .2;
     transform: rotate(-44deg);
-}
-.box {
-    @apply bg-white rounded shadow text-gray-800 mr-10;
-    flex-basis: 50%;
-}
-.box .header {
-    @apply bg-teal-400 py-5 px-10 rounded-t text-white text-center
-}
-.box .body {
-    @apply text-center p-10
-}
-.price {
-    @apply text-2xl text-blue-400
-}
-.bullets li {
-    @apply my-2
-}
-.box .button {
-    @apply bg-blue-400 text-white mx-auto
 }
 
 </style>
