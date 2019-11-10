@@ -23,20 +23,32 @@
         </header>
         <section>
             <div class="container">
-                <div class="side-text left">
-                    <h2>Feature #1</h2>
-                    <p>Information about this feature</p>
-                    <hr>
-                    <div class="action">
-                        <router-link to="docs">See how it works &rarr;</router-link>
+                <div class="content left">
+                    <div class="side-text">
+                        <h2>Seamless A/B Testing with Vuejs and React</h2>
+                        <p> Variate is built as a plugin for applications running either Vuejs or React. 
+                            It seamlessly integrates with either framework while also giving developers the freedom to choose how to integrate it. 
+                            This makes it easy for developer to enable marketers and product people to run experiments.
+                        </p>
+                        <hr>
+                        <div class="action">
+                            <router-link to="docs">Read the docs &rarr;</router-link>
+                        </div>
+                    </div>
+                    <div class="side-image">
+                        <img class="special" src="../assets/component-detail-screenshot.png" alt="  ">
                     </div>
                 </div>
-                <div class="side-text right">
-                    <h2>Feature #2</h2>
-                    <p>Information about this feature</p>
-                    <hr>
-                    <div class="action">
-                        <router-link to="docs">See how it works &rarr;</router-link>
+                <div class="content">
+                    <div class="side-text">
+                        <h2>No Flicker of Original Content</h2>
+                        <p>If you've used typical A/B testing tools, you will be familiar with the dreaded Flicker of Original Content or FOOC. Since Variate makes decisions about which variations to show prior to your pages being rendered, there is no flicker and your original content does not get loaded.</p>
+                        <p>For example, using a traditional A/B testing tool, if you replace one image with another, you will not only see the original image for a split second, but also, the browser will load both images. That is costing you in page performance and likely degrading the user experience, which is not the point of A/B testing!
+                        </p>
+                        <hr>
+                        <div class="action">
+                            <router-link to="docs">See how it works &rarr;</router-link>
+                        </div>
                     </div>
                 </div>
             </div>

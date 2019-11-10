@@ -24,19 +24,21 @@
             </section>
         </header>
         <section>
-            <div class="imagery">
-                <img src="../assets/code-screenshot.png">
-                <img src="../assets/create-component-screenshot.png">
+            <div class="home-imagery">
+                <img class="special" src="../assets/code-screenshot.png">
+                <img class="special" src="../assets/create-component-screenshot.png">
             </div>
         </section>
         <section>
             <div class="container">
-                <div class="side-text left">
-                    <h2>Empower your team, maintain control</h2>
-                    <p>As a developer, you want your application to run smoothly and to load fast. Meanwhile, your marketers, product people and data scientists want to run A/B and MVT tests on your application. Variate gives you the keys to enable your application to be experimented on through typed attributes that only you control.</p>
-                    <hr>
-                    <div class="action">
-                        <router-link to="docs">See how it works &rarr;</router-link>
+                <div class="flex left">
+                    <div class="side-text">
+                        <h2>Empower your team, maintain control</h2>
+                        <p>As a developer, you want your application to run smoothly and to load fast. Meanwhile, your marketers, product people and data scientists want to run A/B and MVT tests on your application. Variate gives you the keys to enable your application to be experimented on through typed attributes that only you control.</p>
+                        <hr>
+                        <div class="action">
+                            <router-link to="docs">See how it works &rarr;</router-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,33 +70,43 @@ export default {
     .side-text hr {
         @apply border-t-2
     }
+    .side-image img {
+        max-width: 100%;
+    }
     @screen sm {
         .side-text {
             @apply w-4/5
         }
     }
     @screen md {
-        .side-text {
+        .right .side-text, .left .side-text {
             @apply w-1/2
         }
-        .side-text.left {
+        .left .side-text {
             @apply text-right ml-0 pl-1
         }
-        .side-text.left hr {
+        .left .side-text hr {
             @apply ml-4
         }
-        .side-text.right {
+        .right .side-text {
             @apply text-left ml-auto mr-0 pr-1
         }
-        .side-text.left hr {
+        .left .side-text hr {
             @apply mr-4
+        }
+        .content {
+            @apply flex
+        }
+        .side-image {
+            max-width: 50%;
+            @apply ml-10
         }
     }
     @screen lg {
-        .side-text.left {
+        .left .side-text {
             @apply pl-32
         }
-        .side-text.right {
+        .right .side-text {
             @apply pr-32
         }
     }
@@ -189,62 +201,62 @@ export default {
         }
     }
     
-    /* Section Imagery */
-    .imagery {
+    /* Section home-imagery */
+    .home-imagery {
        @apply relative w-full z-20 -mt-8
     }
-    .imagery img:nth-child(1){
+    .home-imagery img:nth-child(1){
         transition: 0.2s;
         transform: rotate(12deg);
         margin-left: -30px;
     }
-    .imagery img:nth-child(2){
+    .home-imagery img:nth-child(2){
         transition: 0.5s;
         transform: rotate(-6deg);
         margin-left: 20px;
     }
-    .imagery img {
+    img.special {
         @apply rounded shadow-lg;
     }
     @screen sm {
-        .imagery {  
+        .home-imagery {  
             @apply mx-auto px-16 w-4/5;
         }
-        .imagery img:nth-child(2){
+        .home-imagery img:nth-child(2){
             margin-top: -100px; 
         }
     }
     @screen md {
-        .imagery {  
+        .home-imagery {  
             top: 350px;
             left: 60%;
             max-width: 60%;
             @apply absolute px-0;
         }
-        .imagery img:nth-child(1){
+        .home-imagery img:nth-child(1){
             transform: rotate(18deg);
             max-width: 80%;
         }
-        .imagery img:nth-child(2) {
+        .home-imagery img:nth-child(2) {
             margin-top: 80px;
             margin-left: -20px;
         }
     }
     @screen lg {
-        .imagery {  
+        .home-imagery {  
             top: 300px;
             max-width: 50%;
         }
-        .imagery img:nth-child(2) {
+        .home-imagery img:nth-child(2) {
             margin-top: 0px;
         }
     }
     @screen xl {
-        .imagery {  
+        .home-imagery {  
             top: 200px;
             max-width: 540px;
         }
-        .imagery img:nth-child(1){
+        .home-imagery img:nth-child(1){
             transform: rotate(18deg);
             max-width: 100%;
             margin-left: 0;
