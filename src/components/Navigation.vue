@@ -39,7 +39,7 @@ export default {
             linksLeft: [
                 {to: 'features', label: 'Features'},
                 {to: 'pricing', label: 'Pricing'},
-                {to: 'company', label: 'Company'},
+                // {to: 'company', label: 'Company'},
                 {to: 'docs', label: 'Docs'},
             ],
             linksRight: [
