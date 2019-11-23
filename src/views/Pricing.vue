@@ -50,7 +50,7 @@ export default {
                     price: '$49.99',
                     period: 'per month',
                     features: [
-                        '1:1 Support For First 30 Days',
+                        'Priority Support',
                         'Unlimited Sites',
                         'Unlimited Experiments',
                         'Unlimited Components'
@@ -65,7 +65,8 @@ export default {
                     price: 'Custom Pricing',
                     period: 'per month',
                     features: [
-                        '1:1 Support',
+                        'High Priority Support',
+                        'CDN Hosting',
                         'Unlimited Sites',
                         'Unlimited Experiments',
                         'Unlimited Components'

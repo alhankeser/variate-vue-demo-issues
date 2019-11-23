@@ -1,29 +1,21 @@
-# variate-vue-demo-saas
+# Variate for Vue plugin Demo website
+The purpose of this repo is to serve as a playground to install and demonstrate the capabilities of the Variate for Vuejs plugin.
 
-## Project setup
+## Clone this repo
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
+git clone https://github.com/VariateApp/variate-vue-demo-saas.git variate-vue-demo-saas
 ```
 
-### Compiles and minifies for production
+### Install dependencies
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
+cd variate-vue-demo-saas
+npm install
 ```
 
-### Lints and fixes files
+### Compile and serve for local development
 ```
-yarn run lint
+npm run serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Get started using the Variate for Vue plugin
+Head over to the [Variate for Vue documentation](https://docs.variate.ca/vue/) to learn how to get started experimenting with Variate. 
