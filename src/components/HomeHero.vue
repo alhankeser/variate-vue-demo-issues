@@ -1,7 +1,7 @@
 <template>
   <div class="container">
         <div class="text-content with-image">
-            <h1>{{ headline }}</h1>
+            <h1>The developer-friendly a/b testing tool</h1>
             <p>Variate makes it super easy for developers to enable components for A/B testing in Vuejs and React applications.</p> <p>Get started in less than 5 minutes:</p>
             <div class="home-actions">
                 <pre>npm install variate-vue</pre>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    props: ['headline']
+   
 }
 </script>
 

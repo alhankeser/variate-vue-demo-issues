@@ -7,7 +7,7 @@
                 <span></span>
             </div>
             <section>
-                <HomeHero :headline="headline"/>
+                <HomeHero />
             </section>
         </header>
         <section>
@@ -37,12 +37,7 @@
 import HomeHero from '@/components/HomeHero'
 export default {
     name: 'home',
-    components: { HomeHero },
-    data() {
-        return {
-            headline: 'The developer-friendly A/B testing tool'
-        }
-    }
+    components: { HomeHero }
 }
 </script>
 
