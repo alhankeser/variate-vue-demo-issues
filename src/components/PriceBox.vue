@@ -15,7 +15,7 @@
             </ul>
             <div class="footer">
                 <hr class="my-10">
-                <a class="button" :href="plan.buttonLink">{{ plan.buttonText }}</a>
+                <a class="button" @click="variateTrack(plan.buttonText, 'click')" :href="plan.buttonLink">{{ plan.buttonText }}</a>
             </div>
         </div>
     </div>
@@ -25,7 +25,15 @@
 
 export default {
     name: 'price-box',
-    props: [ 'plan' ]
+    props: [ 'plan' ],
+    methods: {
+        variateTrack(name, type) {
+            this.$variate.track({
+                name: name,
+                type: type
+            });
+        }
+    }
 }
 </script>
 

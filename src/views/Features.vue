@@ -10,7 +10,7 @@
                 <div class="container">
                     <div class="text-content">
                         <div class="font-semibold uppercase">Features</div>
-                        <h1>If you can dream it, you can test it</h1>
+                        <h1>{{ headline || 'My default features headline'}}</h1>
                         <p>Variate can be used to test anything within your application,
                             from API versions to image filters. If you simply want to
                             test headlines and buttons with it, go right ahead.
@@ -57,9 +57,15 @@
 </template>
 
 <script>
+import { mapAttributes } from '@variate/vue';
 
 export default {
     name: 'features',
+    computed: {
+        ...mapAttributes([
+            'headline',
+        ]),
+    }
 }
 </script>
 

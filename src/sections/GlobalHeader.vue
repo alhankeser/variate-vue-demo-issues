@@ -1,16 +1,24 @@
 <template>
     <header class="globalHeader">
+        <div v-if="headline">{{ headline }}</div>
         <Navigation />
     </header>
 </template>
 
 <script>
     import Navigation from '@/components/Navigation'
+    import { mapAttributes } from '@variate/vue';
 
     export default {
-        name: 'global-header',
-        components: { Navigation }
+        name: 'globalheader',
+        components: { Navigation },
+        computed: {
+            ...mapAttributes([
+                'headline',
+            ]),
+        }
     }
+
 </script>
 
 <style>
